@@ -6,18 +6,18 @@ root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.12.1"
-url="https://bamboo.dash.org/browse/DASHL-REL/latestSuccessful/artifact/JOB1/gitian-linux-dash-dist"
+url="https://terracoin.io/bin/terracoin-core-0.12.1.6"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="dashcore-${version}-linux64.tar.gz"
+        tarball_name="terracoin-${version}-linux64.tar.gz"
     elif [ "${arch}" == "x86_32" ]; then
-        tarball_name="dashcore-${version}-linux32.tar.gz"
+        tarball_name="terracoin-${version}-linux32.tar.gz"
     fi
 elif [ "${platform}" == "darwin" ]; then
-    tarball_name="dashcore-${version}-osx64.tar.gz"
+    tarball_name="terracoin-${version}-osx64.tar.gz"
 else
-    echo "Dash binary distribution not available for platform and architecture"
+    echo "Terracoin binary distribution not available for platform and architecture"
     exit -1
 fi
 
@@ -31,7 +31,7 @@ download_bitcoind() {
 
     cd "${root_dir}/data"
 
-    echo "Downloading dash: ${binary_url}"
+    echo "Downloading Terracoin: ${binary_url}"
 
     is_curl=true
     if hash curl 2>/dev/null; then
@@ -50,20 +50,20 @@ download_bitcoind() {
             wget $shasums_url
         fi
         if test -e "${tarball_name}"; then
-            echo "Unpacking dash distribution"
+            echo "Unpacking Terracoin distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "dashcore-${version}/bin/dashd"
+                ln -sf "terracoin-${version}/bin/terracoind"
                 return;
             fi
         fi
     fi
-    echo "Dash binary distribution could not be downloaded"
+    echo "Terracoin binary distribution could not be downloaded"
     exit -1
 }
 
 verify_download() {
-    echo "Verifying signatures of dash download"
+    echo "Verifying signatures of terracoin download"
     gpg --verify "${root_dir}/bin/SHA256SUMS.asc"
 
     if hash shasum 2>/dev/null; then
