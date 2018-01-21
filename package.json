@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-terracoin": "^1.1.2",
+    "bitcore-p2p-terracoin": "TheSin-/bitcore-p2p-terracoin",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
