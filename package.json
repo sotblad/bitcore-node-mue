@@ -2,7 +2,7 @@
   "name": "bitcore-node-terracoin",
   "description": "Full node with extended capabilities using Bitcore and Terracoin Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.0.4",
+  "version": "3.0.6",
   "main": "./index.js",
   "repository": "git://github.com/TheSin-/bitcore-node-terracoin.git",
   "homepage": "https://github.com/TheSin-/bitcore-node-terracoin",
@@ -36,7 +36,9 @@
     "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
     "coverage": "istanbul cover _mocha -- --recursive",
-    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "mocha": "./node_modules/.bin/mocha",
+    "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
     "terracoin",
