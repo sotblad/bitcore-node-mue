@@ -41,7 +41,7 @@ There are several add-on services available to extend the functionality of Bitco
 
 - [Insight API](https://github.com/TheSin-/insight-api-terracoin/tree/master)
 - [Insight UI](https://github.com/TheSin-/insight-ui-terracoin/tree/master)
-- [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service/tree/master)
+- [Bitcore Wallet Service](https://github.com/TheSin-/bitcore-wallet-service-terracoin/tree/master)
 
 ## Documentation
 
