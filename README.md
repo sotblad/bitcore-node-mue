@@ -39,9 +39,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/TheSin-/insight-api-terracoin/tree/master)
-- [Insight UI](https://github.com/TheSin-/insight-ui-terracoin/tree/master)
-- [Bitcore Wallet Service](https://github.com/TheSin-/bitcore-wallet-service-terracoin/tree/master)
+- [Insight API](https://github.com/terracoin/insight-api-terracoin/tree/master)
+- [Insight UI](https://github.com/terracoin/insight-ui-terracoin/tree/master)
+- [Bitcore Wallet Service](https://github.com/terracoin/bitcore-wallet-service-terracoin/tree/master)
 
 ## Documentation
 
