@@ -29,7 +29,7 @@ var destKey = bitcore.PrivateKey();
 describe('Bitcoind Functionality', function() {
 
   before(function(done) {
-    this.timeout(200000);
+    this.timeout(60000);
 
     // Add the regtest network
     bitcore.Networks.enableRegtest();
@@ -439,7 +439,7 @@ describe('Bitcoind Functionality', function() {
         tx.hex.should.be.a('string');
         tx.locktime.should.equal(0);
         tx.feeSatoshis.should.equal(0);
-        tx.outputSatoshis.should.equal(500 * 1e8);
+        tx.outputSatoshis.should.equal(20 * 1e8);
         tx.inputSatoshis.should.equal(0);
         tx.inputs.length.should.equal(1);
         tx.outputs.length.should.equal(1);
@@ -449,7 +449,7 @@ describe('Bitcoind Functionality', function() {
         should.equal(tx.inputs[0].scriptAsm, null);
         should.equal(tx.inputs[0].address, null);
         should.equal(tx.inputs[0].satoshis, null);
-        tx.outputs[0].satoshis.should.equal(500 * 1e8);
+        tx.outputs[0].satoshis.should.equal(20 * 1e8);
         tx.outputs[0].script.should.be.a('string');
         tx.outputs[0].scriptAsm.should.be.a('string');
         tx.outputs[0].spentTxId.should.be.a('string');

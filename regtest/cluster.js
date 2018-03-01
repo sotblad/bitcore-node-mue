@@ -52,7 +52,7 @@ describe('Bitcoin Cluster', function() {
 
   before(function(done) {
     log.info('Starting 3 terracoind daemons');
-    this.timeout(200000);
+    this.timeout(60000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [
         '--regtest',

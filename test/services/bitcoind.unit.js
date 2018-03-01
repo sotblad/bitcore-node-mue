@@ -5331,7 +5331,7 @@ describe('Bitcoin Service', function() {
 				}
 				SporkList.should.have.property('sporks');
 				var sporks = SporkList.sporks;
-				Object.keys(sporks).length.should.equal(9);
+				Object.keys(sporks).length.should.equal(7);
 				sporks['SPORK_1_INSTANTSEND_ENABLED'].should.equal(0);
 				sporks['SPORK_2_INSTANTSEND_BLOCK_FILTERING'].should.equal(0);
 				sporks['SPORK_3_INSTANTSEND_MAX_VALUE'].should.equal(20000);
@@ -5401,7 +5401,7 @@ describe('Bitcoin Service', function() {
 		    MNList[0].vin.should.equal("06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0");
 		    MNList[0].status.should.equal("ENABLED");
 		    MNList[0].rank.should.equal(1);
-		    MNList[0].ip.should.equal("108.61.209.47:13333");
+		    MNList[0].ip.should.equal("108.61.209.47:9999");
 		    MNList[0].protocol.should.equal(70206);
 		    MNList[0].payee.should.equal("Xfpp5BxPfFistPPjTe6FucYmtDVmT1GDG3");
 		    MNList[0].activeseconds.should.equal(7016289);

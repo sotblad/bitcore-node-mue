@@ -37,7 +37,7 @@ var blocks;
 describe('P2P Functionality', function() {
 
   before(function(done) {
-    this.timeout(200000);
+    this.timeout(100000);
 
     // enable regtest
     bitcore.Networks.enableRegtest();
@@ -82,7 +82,7 @@ describe('P2P Functionality', function() {
 
         peer = new Peer({
           host: '127.0.0.1',
-          port: '19994',
+          port: '18444',
           network: regtestNetwork
         });
 
