@@ -5303,115 +5303,111 @@ describe('Bitcoin Service', function() {
     });
 
   });
-       describe('#sporksList', function(){
-               it('will call client sporks and give result', function(done){
-                       var bitcoind = new BitcoinService(baseConfig);
+	describe('#sporksList', function(){
+		it('will call client sporks and give result', function(done){
+			var bitcoind = new BitcoinService(baseConfig);
 
-                       bitcoind.nodes.push({
-                               client: {
-                                       spork: function(param, callback){
-                                               if(param==="show"){
-                                                       callback(null,{result:{
-                                                               "SPORK_2_INSTANTSEND_ENABLED":0,
-                                                               "SPORK_3_INSTANTSEND_BLOCK_FILTERING":0,
-                                                               "SPORK_5_INSTANTSEND_MAX_VALUE":2000,
-                                                               "SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT":0,
-                                                               "SPORK_9_SUPERBLOCKS_ENABLED":0,
-                                                               "SPORK_10_MASTERNODE_PAY_UPDATED_NODES":0,
-                                                               "SPORK_12_RECONSIDER_BLOCKS":0,
-                                                               "SPORK_13_OLD_SUPERBLOCK_FLAG":4070908800,
-                                                               "SPORK_14_REQUIRE_SENTINEL_FLAG":4070908800
-                                                       }
-                                                       })
-                                               }
-                                       }
-                               }
-                       });
-                       bitcoind.getSpork(function(err, SporkList) {
-                               if (err) {
-                                       return done(err);
-                               }
-                               SporkList.should.have.property('sporks');
-                               var sporks = SporkList.sporks;
-                               Object.keys(sporks).length.should.equal(9);
-                               sporks['SPORK_2_INSTANTSEND_ENABLED'].should.equal(0);
-                               sporks['SPORK_3_INSTANTSEND_BLOCK_FILTERING'].should.equal(0);
-                               sporks['SPORK_5_INSTANTSEND_MAX_VALUE'].should.equal(2000);
-                               sporks['SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT'].should.equal(0);
-                               sporks['SPORK_9_SUPERBLOCKS_ENABLED'].should.equal(0);
-                               sporks['SPORK_10_MASTERNODE_PAY_UPDATED_NODES'].should.equal(0);
-                               sporks['SPORK_12_RECONSIDER_BLOCKS'].should.equal(0);
-                               sporks['SPORK_13_OLD_SUPERBLOCK_FLAG'].should.equal(4070908800);
-                               sporks['SPORK_14_REQUIRE_SENTINEL_FLAG'].should.equal(4070908800);
-                               done();
-                       });
-               });
-       });
+			bitcoind.nodes.push({
+				client: {
+					spork: function(param, callback){
+						if(param==="show"){
+							callback(null,{result:{
+								"SPORK_1_INSTANTSEND_ENABLED":0,
+								"SPORK_2_INSTANTSEND_BLOCK_FILTERING":0,
+								"SPORK_3_INSTANTSEND_MAX_VALUE":20000,
+								"SPORK_4_MASTERNODE_PAYMENT_ENFORCEMENT":0,
+								"SPORK_5_SUPERBLOCKS_ENABLED":0,
+								"SPORK_6_RECONSIDER_BLOCKS":0,
+								"SPORK_7_REQUIRE_SENTINEL_FLAG":4070908800
+							}
+							})
+						}
+					}
+				}
+			});
+			bitcoind.getSpork(function(err, SporkList) {
+				if (err) {
+					return done(err);
+				}
+				SporkList.should.have.property('sporks');
+				var sporks = SporkList.sporks;
+				Object.keys(sporks).length.should.equal(9);
+				sporks['SPORK_1_INSTANTSEND_ENABLED'].should.equal(0);
+				sporks['SPORK_2_INSTANTSEND_BLOCK_FILTERING'].should.equal(0);
+				sporks['SPORK_3_INSTANTSEND_MAX_VALUE'].should.equal(20000);
+				sporks['SPORK_4_MASTERNODE_PAYMENT_ENFORCEMENT'].should.equal(0);
+				sporks['SPORK_5_SUPERBLOCKS_ENABLED'].should.equal(0);
+				sporks['SPORK_6_RECONSIDER_BLOCKS'].should.equal(0);
+				sporks['SPORK_7_REQUIRE_SENTINEL_FLAG'].should.equal(4070908800);
+				done();
+			});
+		});
+	});
   describe('#getMNList', function(){
     it('will call client masternode list and give result', function(done){
-           var bitcoind = new BitcoinService(baseConfig);
-           bitcoind.isSynced = function(callback) { return callback(null, true) };
-           bitcoind.nodes.push({
-                   client: {
-                           masternodelist: function(type, cb){
-                             switch (type){
+	    var bitcoind = new BitcoinService(baseConfig);
+	    bitcoind.isSynced = function(callback) { return callback(null, true) };
+	    bitcoind.nodes.push({
+		    client: {
+			    masternodelist: function(type, cb){
+			      switch (type){
                       case "rank":
-                             return cb(null, { result:
-                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 1,
-                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 2}
-                             });
-                                     case "protocol":
-                                             return cb(null, { result:
-                                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 70206,
-                                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 70206}
-                                             });
+	                      return cb(null, { result:
+		                      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 1,
+			                      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 2}
+	                      });
+				      case "protocol":
+					      return cb(null, { result:
+						      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 70206,
+							      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 70206}
+					      });
                       case "payee":
-                             return cb(null, { result:
-                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "Xfpp5BxPfFistPPjTe6FucYmtDVmT1GDG3",
-                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "Xn16rfdygfViHe2u36jkDUs9NLmUrUsEKa"}
-                             });
-                                     case "lastseen":
-                                             return cb(null, { result:
-                                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 1502078120,
-                                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 1502078203}
-                                             });
-                                     case "activeseconds":
-                                             return cb(null, { result:
-                                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 7016289,
-                                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 2871829}
-                                             });
-                                       break;
-                                     case "addr":
-                                             return cb(null, { result:
-                                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "108.61.209.47:13333",
-                                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "34.226.228.73:13333"}
-                                             });
-                                     case "status":
-                                             return cb(null, { result:
-                                                     { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "ENABLED",
-                                                             'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "ENABLED"}
-                                             });
+	                      return cb(null, { result:
+		                      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "Xfpp5BxPfFistPPjTe6FucYmtDVmT1GDG3",
+			                      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "Xn16rfdygfViHe2u36jkDUs9NLmUrUsEKa"}
+	                      });
+				      case "lastseen":
+					      return cb(null, { result:
+						      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 1502078120,
+							      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 1502078203}
+					      });
+				      case "activeseconds":
+					      return cb(null, { result:
+						      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': 7016289,
+							      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': 2871829}
+					      });
+				        break;
+				      case "addr":
+					      return cb(null, { result:
+						      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "108.61.209.47:9999",
+							      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "34.226.228.73:9999"}
+					      });
+				      case "status":
+					      return cb(null, { result:
+						      { '06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0': "ENABLED",
+							      'b76bafae974b80204e79858eb62aedec41159519c90d23f811cca1eca40f2e4c-1': "ENABLED"}
+					      });
                   }
                 }
-                   }
-           });
-           
-           bitcoind.getMNList(function(err, MNList) {
-                   if (err) {
-                           return done(err);
-                   }
-                   
-                   MNList.length.should.equal(2);
-                   MNList[0].vin.should.equal("06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0");
-                   MNList[0].status.should.equal("ENABLED");
-                   MNList[0].rank.should.equal(1);
-                   MNList[0].ip.should.equal("108.61.209.47:13333");
-                   MNList[0].protocol.should.equal(70206);
-                   MNList[0].payee.should.equal("Xfpp5BxPfFistPPjTe6FucYmtDVmT1GDG3");
-                   MNList[0].activeseconds.should.equal(7016289);
-                   MNList[0].lastseen.should.equal(1502078120);
-                   done();
-           });
+		    }
+	    });
+	    
+	    bitcoind.getMNList(function(err, MNList) {
+		    if (err) {
+			    return done(err);
+		    }
+		    
+		    MNList.length.should.equal(2);
+		    MNList[0].vin.should.equal("06c4c53b64019a021e8597c19e40807038cab4cd422ca9241db82aa19887354b-0");
+		    MNList[0].status.should.equal("ENABLED");
+		    MNList[0].rank.should.equal(1);
+		    MNList[0].ip.should.equal("108.61.209.47:13333");
+		    MNList[0].protocol.should.equal(70206);
+		    MNList[0].payee.should.equal("Xfpp5BxPfFistPPjTe6FucYmtDVmT1GDG3");
+		    MNList[0].activeseconds.should.equal(7016289);
+		    MNList[0].lastseen.should.equal(1502078120);
+		    done();
+	    });
     });
 
     it('will return error if one of nodes not synced yet', function(done){
