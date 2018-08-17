@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node-terracoin",
-  "description": "Full node with extended capabilities using Bitcore and Terracoin Core",
+  "name": "bitcore-node-mue",
+  "description": "Full node with extended capabilities using Bitcore and MonetaryUnit Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.0.6",
   "main": "./index.js",
-  "repository": "git://github.com/terracoin/bitcore-node-terracoin.git",
-  "homepage": "https://github.com/terracoin/bitcore-node-terracoin",
+  "repository": "git://github.com/muecoin/bitcore-node-mue.git",
+  "homepage": "https://github.com/muecoin/bitcore-node-mue",
   "bugs": {
-    "url": "https://github.com/terracoin/bitcore-node-terracoin/issues"
+    "url": "https://github.com/muecoin/bitcore-node-mue/issues"
   },
   "contributors": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "bin": {
-    "bitcore-node-terracoin": "./bin/bitcore-node-terracoin"
+    "bitcore-node-mue": "./bin/bitcore-node-mue"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -41,13 +41,13 @@
     "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
-    "terracoin",
-    "terracoind"
+    "monetaryunit",
+    "mued"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-terracoin": "^1.0.1",
-    "bitcore-lib-terracoin": "^0.15.2",
+    "bitcoind-rpc-mue": "muecoin/bitcoind-rpc-mue",
+    "bitcore-lib-mue": "sotblad/bitcore-lib-mue",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-terracoin": "^1.1.6",
+    "bitcore-p2p-mue": "muecoin/bitcore-p2p-mue",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
