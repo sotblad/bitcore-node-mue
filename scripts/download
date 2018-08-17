@@ -78,7 +78,7 @@ verify_download() {
     echo "Checksum (verified): ${expected_sha}"
     if [ "${download_sha}" != "${expected_sha}" ]; then
         echo -e "\033[1;31mChecksums did NOT match!\033[0m\n"
-        fi
+        exit 1
     else
         echo -e "\033[1;32mChecksums matched!\033[0m\n"
     fi
