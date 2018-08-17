@@ -4,9 +4,9 @@ var path = require('path');
 var async = require('async');
 var spawn = require('child_process').spawn;
 
-var BitcoinRPC = require('bitcoind-rpc-terracoin');
+var BitcoinRPC = require('bitcoind-rpc-mue');
 var rimraf = require('rimraf');
-var bitcore = require('bitcore-lib-terracoin');
+var bitcore = require('bitcore-lib-mue');
 var chai = require('chai');
 var should = chai.should();
 
@@ -19,11 +19,11 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/terracoind')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/mued')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
-      conf: path.resolve(__dirname, './data/node1/terracoin.conf'),
+      conf: path.resolve(__dirname, './data/node1/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30521,
@@ -32,7 +32,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node2'),
-      conf: path.resolve(__dirname, './data/node2/terracoin.conf'),
+      conf: path.resolve(__dirname, './data/node2/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30522,
@@ -41,7 +41,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node3'),
-      conf: path.resolve(__dirname, './data/node3/terracoin.conf'),
+      conf: path.resolve(__dirname, './data/node3/mue.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30523,
@@ -51,7 +51,7 @@ describe('Bitcoin Cluster', function() {
   ];
 
   before(function(done) {
-    log.info('Starting 3 terracoind daemons');
+    log.info('Starting 3 mued daemons');
     this.timeout(60000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [
