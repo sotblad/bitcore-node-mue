@@ -4439,7 +4439,7 @@ describe('Bitcoin Service', function() {
     });
     it('will send to client and get hash', function() {
       var bitcoind = new BitcoinService(baseConfig);
-      var sendRawTransaction = sinon.stub().callsArgWith(2, null, {
+      var sendRawTransaction = sinon.stub().callsArgWith(3, null, {
         result: tx.hash
       });
       bitcoind.nodes.push({
