@@ -2461,7 +2461,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 1,
           satoshis: 400000,
-          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           timestamp: 1461342954813,
           txid: 'f71bccef3a8f5609c7f016154922adbfe0194a96fb17a798c24077c18d0a9345'
         },
@@ -2469,7 +2469,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 0,
           satoshis: 100000,
-          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           timestamp: 1461342833133,
           txid: 'f637384e9f81f18767ea50e00bce58fc9848b6588a1130529eebba22a410155f'
         }
