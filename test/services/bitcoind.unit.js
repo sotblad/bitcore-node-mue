@@ -3819,6 +3819,8 @@ describe('Bitcoin Service', function() {
           })
         }
       });
+      //cause first call will be not getBlock, but _maybeGetBlockHash, which will set up nodesIndex to 0
+      bitcoind.nodesIndex = 2;
       bitcoind.getRawBlock(blockhash, function(err, buffer) {
         if (err) {
           return done(err);
