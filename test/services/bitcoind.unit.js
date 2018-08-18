@@ -3824,7 +3824,7 @@ describe('Bitcoin Service', function() {
           return done(err);
         }
         buffer.should.be.instanceof(Buffer);
-        getBlockWithError.callCount.should.equal(2);
+        getBlockWithError.callCount.should.equal(1);
         done();
       });
     });
