@@ -609,7 +609,7 @@ describe('Bitcoin Service', function() {
         bitcoind.nodes[0].client.getInfo.callCount.should.equal(1);
         bitcoind.nodes[1].client.getInfo.callCount.should.equal(1);
         bitcoind.nodes[2].client.getInfo.callCount.should.equal(1);
-        bitcoind.nodesIndex.should.equal(2);
+        bitcoind.nodesIndex.should.equal(0);
         done();
       });
     });
