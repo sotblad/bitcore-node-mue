@@ -2352,7 +2352,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         }
@@ -2384,7 +2384,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         }
@@ -2451,7 +2451,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         }
@@ -2461,7 +2461,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 1,
           satoshis: 400000,
-          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           timestamp: 1461342954813,
           txid: 'f71bccef3a8f5609c7f016154922adbfe0194a96fb17a798c24077c18d0a9345'
         },
@@ -2469,7 +2469,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 0,
           satoshis: 100000,
-          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           timestamp: 1461342833133,
           txid: 'f637384e9f81f18767ea50e00bce58fc9848b6588a1130529eebba22a410155f'
         }
@@ -2524,7 +2524,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         },
@@ -2532,7 +2532,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 2,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         }
@@ -2593,7 +2593,7 @@ describe('Bitcoin Service', function() {
           satoshis: 100000,
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           index: 1,
-          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           timestamp: 1461342833133
         }
       ];
@@ -2603,7 +2603,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 0,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         },
@@ -2611,7 +2611,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         },
@@ -2619,7 +2619,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 2,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 7679241,
           height: 207111
         }
@@ -2728,7 +2728,7 @@ describe('Bitcoin Service', function() {
         utxos[0].address.should.equal(address);
         utxos[0].txid.should.equal('e9dcf22807db77ac0276b03cc2d3a8b03c4837db8ac6650501ef45af1c807cce');
         utxos[0].outputIndex.should.equal(1);
-        utxos[0].script.should.equal('76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac');
+        utxos[0].script.should.equal('a914809dc14496f99b6deb722cf46d89d22f4beb8efd87');
         utxos[0].timestamp.should.equal(1461342833133);
         done();
       });
@@ -2751,7 +2751,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 0,
           height: 207111
         }
@@ -2794,7 +2794,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           txid: '46f24e0c274fc07708b781963576c4c5d5625d926dbb0a17fa865dcd9fe58ea0',
           outputIndex: 1,
-          script: '76a914f399b4b8894f1153b96fce29f05e6e116eb4c21788ac',
+          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
           satoshis: 0,
           height: 207111
         }
@@ -4668,7 +4668,7 @@ describe('Bitcoin Service', function() {
           spentHeight: 100,
           valueSat: 100,
           scriptPubKey: {
-            hex: '76a9140b2f0a0c31bfe0406b0ccc1381fdbe311946dadc88ac',
+            hex: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
             asm: 'OP_DUP OP_HASH160 0b2f0a0c31bfe0406b0ccc1381fdbe311946dadc OP_EQUALVERIFY OP_CHECKSIG',
             addresses: ['mgY65WSfEmsyYaYPQaXhmXMeBhwp4EcsQW']
           }
@@ -4724,7 +4724,7 @@ describe('Bitcoin Service', function() {
         should.equal(input.address, 'mgY65WSfEmsyYaYPQaXhmXMeBhwp4EcsQW');
         var output = tx.outputs[0];
         should.equal(output.satoshis, 100);
-        should.equal(output.script, '76a9140b2f0a0c31bfe0406b0ccc1381fdbe311946dadc88ac');
+        should.equal(output.script, 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87');
         should.equal(output.scriptAsm, 'OP_DUP OP_HASH160 0b2f0a0c31bfe0406b0ccc1381fdbe311946dadc OP_EQUALVERIFY OP_CHECKSIG');
         should.equal(output.address, 'mgY65WSfEmsyYaYPQaXhmXMeBhwp4EcsQW');
         should.equal(output.spentTxId, '4316b98e7504073acd19308b4b8c9f4eeb5e811455c54c0ebfe276c0b1eb6315');
