@@ -12,6 +12,8 @@ addons:
       - libzmq3-dev
 node_js:
   - 8
+  before_install:
+  - chmod +x /scripts/download
 script:
   - ./scripts/download
 #  - npm run regtest
