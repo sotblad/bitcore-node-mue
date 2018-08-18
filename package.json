@@ -46,7 +46,7 @@
   "dependencies": {
     "async": "^1.3.0",
     "bitcoind-rpc-mue": "muecoin/bitcoind-rpc-mue",
-    "bitcore-lib-mue": "sotblad/bitcore-lib-mue",
+    "bitcore-lib-mue": "muecoin/bitcore-lib-mue",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
