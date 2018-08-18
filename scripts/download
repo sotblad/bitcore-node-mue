@@ -7,7 +7,7 @@ platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 # TODO Update version and releases URL
 version="1.0.3.2"
-url="https://monetaryunit.org/bin/"
+url="https://monetaryunit.org/bin/monetaryunit-1.0.3.2.tar.gz"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
