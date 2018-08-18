@@ -812,7 +812,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(17683);
+      bitcoind._getDefaultConf().rpcport.should.equal(18683);
     });
   });
 
