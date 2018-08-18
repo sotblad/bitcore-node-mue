@@ -105,7 +105,7 @@ describe('Bitcoin Service', function() {
       var bitcoind = new BitcoinService(baseConfig);
       var methods = bitcoind.getAPIMethods();
       should.exist(methods);
-      methods.length.should.equal(23);
+      methods.length.should.equal(21);
     });
   });
 
@@ -609,7 +609,7 @@ describe('Bitcoin Service', function() {
         bitcoind.nodes[0].client.getInfo.callCount.should.equal(1);
         bitcoind.nodes[1].client.getInfo.callCount.should.equal(1);
         bitcoind.nodes[2].client.getInfo.callCount.should.equal(1);
-        bitcoind.nodesIndex.should.equal(0);
+        bitcoind.nodesIndex.should.equal(2);
         done();
       });
     });
@@ -798,7 +798,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(29947);
+      bitcoind._getDefaultConf().rpcport.should.equal(19682);
     });
     it('will get default rpc port for regtest', function() {
       bitcore.Networks.enableRegtest();
@@ -812,7 +812,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(29947);
+      bitcoind._getDefaultConf().rpcport.should.equal(19682);
     });
   });
 
@@ -2461,7 +2461,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 1,
           satoshis: 400000,
-          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
+          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
           timestamp: 1461342954813,
           txid: 'f71bccef3a8f5609c7f016154922adbfe0194a96fb17a798c24077c18d0a9345'
         },
@@ -2469,7 +2469,7 @@ describe('Bitcoin Service', function() {
           address: 'XnQuJpAgEDNtRwoXWLfuEs69cMgCYS8rgs',
           outputIndex: 0,
           satoshis: 100000,
-          script: 'a914809dc14496f99b6deb722cf46d89d22f4beb8efd87',
+          script: '76a914809dc14496f99b6deb722cf46d89d22f4beb8efd88ac',
           timestamp: 1461342833133,
           txid: 'f637384e9f81f18767ea50e00bce58fc9848b6588a1130529eebba22a410155f'
         }
@@ -3824,7 +3824,7 @@ describe('Bitcoin Service', function() {
           return done(err);
         }
         buffer.should.be.instanceof(Buffer);
-        getBlockWithError.callCount.should.equal(1);
+        getBlockWithError.callCount.should.equal(2);
         done();
       });
     });
