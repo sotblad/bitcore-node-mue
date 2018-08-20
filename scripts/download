@@ -2,7 +2,7 @@
 
 set -e
 
-root_dir="${HOME}/.bitcore"
+root_dir="${HOME}/.muecore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 # TODO Update version and releases URL
