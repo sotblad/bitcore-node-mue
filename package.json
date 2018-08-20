@@ -45,8 +45,8 @@
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-mue": "muecoin/bitcoind-rpc-mue",
-    "bitcore-lib-mue": "muecoin/bitcore-lib-mue",
+    "bitcoind-rpc-mue": "git+https://github.com/muecoin/bitcoind-rpc-mue.git",
+    "bitcore-lib-mue": "git+https://github.com/muecoin/bitcore-lib-mue.git",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-mue": "muecoin/bitcore-p2p-mue",
+    "bitcore-p2p-mue": "git+https://github.com/muecoin/bitcore-p2p-mue.git",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
