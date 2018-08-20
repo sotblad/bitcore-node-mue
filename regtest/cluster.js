@@ -19,7 +19,7 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/mued')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.muecore/data/mued')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
